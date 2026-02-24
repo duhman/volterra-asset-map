@@ -1,11 +1,34 @@
 # Volterra Asset Map
 
-> Large-scale geospatial visualization of 42,500+ EV charging stations with real-time filtering, clustering, and CRM integration.
+> Sales and operations had no unified spatial view of 42,500+ charging stations across Nordic countries -- asset data lived in spreadsheets, CRM fields, and third-party databases. This map unified everything into one interactive tool.
 
 ![Next.js](https://img.shields.io/badge/Next.js-16-black)
 ![React](https://img.shields.io/badge/React-19-61DAFB)
 ![MapLibre](https://img.shields.io/badge/MapLibre_GL-JS-blue)
 ![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-3ECF8E)
+
+## The Problem
+
+Asset data was fragmented across Excel spreadsheets, HubSpot CRM records, and third-party station databases. Sales reps couldn't answer basic coverage questions ("how many stations do we have in Bergen?") without manual data gathering. Operations had no way to visualize network density, identify coverage gaps, or plan expansion -- every analysis started from scratch.
+
+## What This Does
+
+- **42,500+ stations on one interactive map** -- MapLibre GL JS renders all Nordic charging stations with client-side clustering that stays performant at every zoom level
+- **Multi-criteria filtering** -- Sidebar filters by network, status, connector type, and power level so sales can answer coverage questions in seconds
+- **Bidirectional CRM sync** -- HubSpot facility data flows in and out, keeping the map and CRM in sync without manual exports
+
+## Impact
+
+| Metric                | Detail                                                                     |
+| --------------------- | -------------------------------------------------------------------------- |
+| Stations mapped       | 42,500+ across Nordic countries                                            |
+| Rendering performance | Client-side clustering handles full dataset without server-side processing |
+| Data sources unified  | Excel, HubSpot CRM, third-party databases into one view                    |
+| Coverage queries      | Answered in seconds via interactive filtering (previously manual)          |
+
+## Part of the Volterra Platform
+
+Asset Map shares its Supabase data layer with the [Knowledge Engine](../volterra-knowledge-engine/), making facility data searchable across the platform. CRM records are shared bidirectionally with [Call Intelligence](../volterra-call-intelligence/) for deal context.
 
 ## Architecture
 
